@@ -1,0 +1,109 @@
+/* Event Ticketing System - Premium Theater Theme */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Warm, sophisticated palette */
+  --bg-primary: #0d0d0d;
+  --bg-elevated: #1a1814;
+  --bg-card: #252118;
+  --border-subtle: #3d3529;
+  
+  /* Warm accent colors */
+  --gold: #c9a227;
+  --gold-light: #e5c76b;
+  --gold-glow: rgba(201, 162, 39, 0.3);
+  --amber: #d97706;
+  --terracotta: #c2410c;
+  
+  /* Seat states */
+  --seat-available: #2d6a4f;
+  --seat-available-hover: #40916c;
+  --seat-booked: #7f1d1d;
+  --seat-booking: #92400e;
+  
+  /* Text */
+  --text-primary: #faf7f2;
+  --text-muted: #a39e93;
+  --text-dim: #6b6560;
+  
+  /* Status colors */
+  --success: #4ade80;
+  --error: #f87171;
+  --info: #e5c76b;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-primary);
+  min-height: 100vh;
+  color: var(--text-primary);
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(ellipse at top, rgba(201, 162, 39, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(217, 119, 6, 0.02) 0%, transparent 40%);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 var(--gold-glow); }
+  50% { box-shadow: 0 0 20px 4px var(--gold-glow); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
