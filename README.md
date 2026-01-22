@@ -1,6 +1,6 @@
 # Event Ticketing System
 
-A full-stack web application for booking event tickets. It uses **Spring Boot** for the backend and **React** for the frontend, designed to prevent double-booking issues.
+A full-stack web application for booking event tickets. It uses spring Boot for the backend and React for the frontend, designed to prevent double booking issues.
 
 ##  Tech Stack
 * **Backend:** Java Spring Boot
